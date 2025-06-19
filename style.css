@@ -332,12 +332,6 @@ body {
   right: 10px;
 }
 
-/* 新增：讓 gameboy 外框等比例縮放，手機橫直都適用 */
-body {
-  /* ...existing code... */
-  /* 移除 align-items/justify-content，改用下方 .gameboy-center */
-  display: block;
-}
 
 .gameboy-center {
   width: 100vw;
@@ -353,7 +347,6 @@ body {
   max-width: 1012.5px;
   aspect-ratio: 1012.5 / 787.5;
   height: auto;
-  /* ...existing code... */
   min-width: 320px;
   min-height: 250px;
 }
