@@ -358,32 +358,3 @@ body {
   max-height: 100%;
   box-sizing: border-box;
 }
-
-/* 響應式字體縮放 */
-.gameboy, .screen-area, .content, .profile-card, .sidebar button, .popup-box {
-  font-size: min(1.2vw, 18px);
-}
-
-/* 小螢幕時微調按鈕與字體 */
-@media (max-width: 600px) {
-  html, body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .gameboy {
-    /* 以原始寬度等比例縮放，所有內容都會一起縮小 */
-    transform-origin: top left;
-    scale: calc(100vw / 1012.5);
-    /* 若要高度也剛好填滿，可用 min() 取最小值：
-    scale: min(calc(100vw / 1012.5), calc(100vh / 787.5));
-    */
-  }
-}
