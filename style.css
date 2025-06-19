@@ -387,45 +387,24 @@ body {
 
 /* 小螢幕時微調按鈕與字體 */
 @media (max-width: 600px) {
-  .gameboy {
+  html, body {
     width: 100vw;
-    border-width: 6vw;
-    border-radius: 10vw;
-    padding-top: 4vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
-  .screen-area {
-    width: 92vw;
-    height: auto;
-    min-height: 220px;
-    border-width: 1.5vw;
-    border-radius: 4vw;
-    margin-bottom: 2vw;
-    box-shadow: 0 0 0 2vw #b8c6db;
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .sidebar {
-    min-width: 22vw;
-    padding: 2vw;
-    border-left-width: 1.5vw;
-  }
-  .content {
-    padding: 2vw;
-    border-width: 0.7vw;
-    box-shadow: 1.5vw 1.5vw 0 #888, 2vw 2vw 0 #fff;
-  }
-  .profile-card {
-    flex-direction: column;
-    gap: 2vw;
-    padding: 2vw;
-  }
-  .avatar {
-    width: 32vw;
-    height: 32vw;
-    border-radius: 5vw;
-  }
-  .footer-btn {
-    width: 12vw;
-    height: 12vw;
-    min-width: 48px;
-    min-height: 48px;
+  .gameboy {
+    /* 以原始寬度等比例縮放，所有內容都會一起縮小 */
+    transform-origin: top left;
+    scale: calc(100vw / 1012.5);
+    /* 若要高度也剛好填滿，可用 min() 取最小值：
+    scale: min(calc(100vw / 1012.5), calc(100vh / 787.5));
+    */
   }
 }
