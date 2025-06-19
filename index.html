@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>名片</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="gameboy">
+    <div class="screen-area">
+      <div class="sidebar">
+        <button onclick="switchSection('home')">我</button>
+        <button onclick="switchSection('about')">使用說明</button>
+        <button onclick="switchSection('work')">推し&產品</button>
+        <button onclick="switchSection('contact')">夢向</button>
+      </div>
+      <div class="content">
+        <div id="home" class="section active">
+          <div class="card-carousel-container" id="home-carousel">
+            <button class="carousel-arrow left" onclick="slideHomeCard(-1)">&#8592;</button>
+            <div class="card-carousel">
+              <!-- 第一張：原本的名片內容 -->
+              <div class="profile-card carousel-card">
+                <div style="display: flex; align-items: flex-start; gap: 30px; width: 100%;">
+                  <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="頭像.png" alt="頭像" class="avatar">
+                    <div class="profile-extra">
+                      ISFP 20↑<br>
+                      fff×｜混圈×<br>
+                      直戳○｜交友○<br>
+                      同擔○｜同嫁△
+                    </div>
+                  </div>
+                  <div class="profile-info">
+                    <h2>Uki</h2>
+                    <p>我是小希，叫我優紀或任何能明確辨識身分之稱呼都可以。<br>
+                    喜歡銀時<br>
+                    身分認同是坂田銀時的貓。<br></p>
+                    <p>優紀是夢設名，姓什麼都無所謂，目前姓林，可能偶爾變成坂田優紀或張優紀，隨喜。<br>
+                    <p>少數人知道我真正的姓氏和名字，請不要用來稱呼我。</p>
+                  </div>
+                </div>
+              </div>
+              <!-- 第二張：你要放的照片 -->
+              <div class="profile-card carousel-card">
+                <div style="width:100%;display:flex;justify-content:center;align-items:center;min-height:220px;gap:20px;flex-wrap:wrap;">
+                  <img src="貓貓.png" alt="照片1" style="height:400px;max-width:100%;border-radius:18px;object-fit:contain;box-shadow:0 2px 12px #ccc;">
+                </div>
+              </div>
+              <div class="profile-card carousel-card">
+                <div style="width:100%;display:flex;justify-content:center;align-items:center;min-height:220px;gap:20px;flex-wrap:wrap;">
+                  <img src="委託.jpg" alt="照片2" style="height:400px;max-width:100%;border-radius:18px;object-fit:contain;box-shadow:0 2px 12px #ccc;">
+                </div>
+                <p>©️修于</p>
+              </div>
+            </div>
+            <button class="carousel-arrow right" onclick="slideHomeCard(1)">&#8594;</button>
+          </div>
+        </div>
+        <div id="about" class="section">
+          <h2>關於飼養守則</h2>
+          <p>若以下您在打字時不會注意請不要戳我(隨時更新)：<br>
+          應該→因該<br>
+          不要→補藥<br>
+          有鏽→有繡<br>
+          徽章→吧唧<br>
+          再在、已以...<br></p>
+          <p>我不喜歡</p>
+          <hr>
+          <p>版面及發言會出現髒話eg:幹<br>
+          女權相關發言<br>
+          ‼︎不接觸使用辱女髒話人士‼︎<br></p>
+          <p>毛很多，退移都隨心情不會另行告知<br>
+            沒開threads的通知，所以回留言看運氣</p>
+          <b><p>會預防性封鎖對家、發言令我不適及以上，若我有任何讓您不適也請封鎖我，活網愉快(o^^o)</p></b>
+        </div>
+        <div id="work" class="section">
+          <!-- 輪播名片區塊 -->
+          <div class="card-carousel-container">
+            <button class="carousel-arrow left" onclick="slideCard(-1)">&#8592;</button>
+            <div class="card-carousel">
+              <!-- 第一張：原本的 profile-card 內容 -->
+              <div class="profile-card carousel-card">
+                <div style="display: flex; align-items: flex-start; gap: 30px; width: 100%;">
+                  <div style="display: flex; flex-direction: column; align-items: center;">
+                    <!-- 你可以放圖片，例如：<img src="product.png" alt="推し" class="avatar"> -->
+                  </div>
+                  <div class="profile-info">
+                    <h2>深坑推角↓</h2>
+                    <ul>
+                      <li>銀魂：坂田銀時、沖田総悟、猿飛あやめ</li>
+                      <li>ハイキュー‼︎：木兎光太郎</li>
+                      <li>ヒロアカ：緑谷出久</li>
+                    </ul>
+                    <h2>拒拆↓</h2>
+                    <ul>
+                      <li>兔赤、月山、沖神、里漢cb</li>
+                    </ul>
+                    <h2>嗑一點↓</h2>
+                    <ul>
+                      <li>勝出、出茶、土三、銀猿、銀土、近妙</li>
+                    </ul>
+                    <h2>雷貼臉↓</h2>
+                    <ul>
+                      <li>銀右</li>
+                      <li>銀神</li>
+                    </ul>
+                    <p>（通常會自避雷，但銀神看到對家會直接封）</p>
+                  </div>
+                </div>
+              </div>
+              <!-- 第二張名片 -->
+              <div class="profile-card carousel-card">
+                <div style="width:100%;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:14px;justify-items:center;align-items:center;">
+                  <img src="牛奶.jpg" alt="照片1" style="width:100%;aspect-ratio:1/1;border-radius:18px;object-fit:cover;box-shadow:0 2px 12px #ccc;">
+                  <img src="銀貓.jpg" alt="照片2" style="width:100%;aspect-ratio:1/1;border-radius:18px;object-fit:cover;box-shadow:0 2px 12px #ccc;">
+                  <img src="蛋糕.jpg" alt="照片3" style="width:100%;aspect-ratio:1/1;border-radius:18px;object-fit:cover;box-shadow:0 2px 12px #ccc;">
+                  <img src="猿.png" alt="照片4" style="width:100%;aspect-ratio:1/1;border-radius:18px;object-fit:cover;box-shadow:0 2px 12px #ccc;">
+                </div>
+              </div>
+              <!-- 第三張名片 -->
+              <div class="profile-card carousel-card">
+                 <div style="width:100%;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:14px;justify-items:center;align-items:center;">
+                  <img src="甚爾.jpg" alt="照片1" style="width:100%;aspect-ratio:1/1;border-radius:18px;object-fit:cover;box-shadow:0 2px 12px #ccc;">
+                  <img src="出久.jpg" alt="照片2" style="width:100%;aspect-ratio:1/1;border-radius:18px;object-fit:cover;box-shadow:0 2px 12px #ccc;">
+                  <img src="兔.jpg" alt="照片3" style="width:100%;aspect-ratio:1/1;border-radius:18px;object-fit:cover;box-shadow:0 2px 12px #ccc;">
+                  <img src="沖神.jpg" alt="照片4" style="width:100%;aspect-ratio:1/1;border-radius:18px;object-fit:cover;box-shadow:0 2px 12px #ccc;">
+                </div>
+              </div>
+            </div>
+            <button class="carousel-arrow right" onclick="slideCard(1)">&#8594;</button>
+          </div>
+        </div>
+        <div id="contact" class="section">
+          <h2>Gintoki X Uki</h2>
+          <p>緩慢架設中......</p>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="dpad"></div>
+      <div class="ab">
+        <div class="a"></div>
+        <div class="b"></div>
+      </div>
+      <div class="start-select">
+        <div class="start"></div>
+        <div class="select"></div>
+      </div>
+    </div>
+    <div class="footer-buttons">
+      <a class="footer-btn ig" title="IG主頁"
+         href="https://www.instagram.com/ny1kuu_?igsh=NHczdjNnNGh2eHJp&utm_source=qr"
+         target="_blank" rel="noopener"></a>
+      <button class="footer-btn line" title="LINE主頁"></button>
+      <button class="footer-btn fb" title="FB主頁"></button>
+    </div>
+  </div>
+  <!-- 彈窗 -->
+  <div id="popup" class="popup-mask" style="display:none;">
+    <div class="popup-box">
+      <h3>需解鎖以下成就</h3>
+      <ul>
+        <li>與林優紀約會成功</li>
+        <li>在無意中自行發現</li>
+      </ul>
+      <button onclick="closePopup()">關閉</button>
+    </div>
+  </div>
+  <audio id="bgm" src="wii.mp3" autoplay loop></audio>
+  <script src="app.js"></script>
+</body>
+</html>
