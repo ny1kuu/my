@@ -2,7 +2,13 @@ window.addEventListener('DOMContentLoaded', function() {
   var audio = document.getElementById('bgm');
   if (audio) {
     audio.volume = 0.6;
+    // 嘗試自動播放
     audio.play().catch(function(){});
+    // 若自動播放失敗，點擊任意處後播放
+    document.body.addEventListener('click', function playAudioOnce() {
+      audio.play();
+      document.body.removeEventListener('click', playAudioOnce);
+    });
   }
 });
 document.querySelectorAll('.footer-btn.line, .footer-btn.fb').forEach(btn => {
