@@ -343,18 +343,15 @@ body {
 }
 
 .gameboy {
-  width: 90vw;
-  max-width: 1012.5px;
-  aspect-ratio: 1012.5 / 787.5;
-  height: auto;
-  min-width: 320px;
-  min-height: 250px;
-}
-
-/* 讓內容不會超出外框 */
-.screen-area,
-.content {
-  max-width: 100%;
-  max-height: 100%;
-  box-sizing: border-box;
+  background: #e6d9c4;
+  border: 15px solid #888;
+  border-radius: 60px;
+  width: 1012.5px;
+  height: 787.5px;
+  box-shadow: 0 15px 60px #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 45px;
 }
