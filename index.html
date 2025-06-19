@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>名片</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="gameboy">
+    <div class="screen-area">
+      <div class="sidebar">
+        <button onclick="switchSection('home')">我</button>
+        <button onclick="switchSection('about')">使用說明</button>
+        <button onclick="switchSection('work')">推し&產品</button>
+        <button onclick="switchSection('contact')">夢向</button>
+      </div>
+      <div class="content">
+        <div id="home" class="section active">
+          <p>首頁內容</p>
+        </div>
+        <div id="about" class="section">
+          <p>關於使用說明</p>
+        </div>
+        <div id="work" class="section">
+          <p>推し&作品展示</p>
+        </div>
+        <div id="contact" class="section">
+          <p>夢向介紹</p>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="dpad"></div>
+      <div class="ab"></div>
+      <div class="start-select"></div>
+    </div>
+    <div class="footer-buttons">
+      <a class="footer-btn ig" title="IG主頁" href="#" target="_blank" rel="noopener"></a>
+      <button class="footer-btn line" title="LINE主頁"></button>
+      <button class="footer-btn fb" title="FB主頁"></button>
+    </div>
+  </div>
+
+  <!-- 彈窗 -->
+  <div id="popup" class="popup-mask" style="display:none;">
+    <div class="popup-box">
+      <h3>需解鎖以下成就</h3>
+      <ul>
+        <li>與林優紀約會成功</li>
+        <li>在無意中自行發現</li>
+      </ul>
+      <button onclick="closePopup()">關閉</button>
+    </div>
+  </div>
+
+  <audio id="bgm" src="wii.mp3" autoplay loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>

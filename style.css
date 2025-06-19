@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  background: #b0b0b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.gameboy {
+  background: #e6d9c4;
+  border: 15px solid #888;
+  border-radius: 60px;
+  width: 1012.5px;
+  height: 787.5px;
+  box-shadow: 0 15px 60px #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 45px;
+}
+
+.screen-area {
+  display: flex;
+  border: 11px solid #444;
+  border-radius: 30px;
+  background: #222;
+  width: 900px;
+  height: 487.5px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.sidebar {
+  background: #b8c6db;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 168px;
+}
+
+.sidebar button {
+  background: #fff;
+  border: 6px solid #222;
+  font-family: 'Press Start 2P', sans-serif;
+  cursor: pointer;
+  box-shadow: 6px 6px 0 #888;
+  padding: 12px;
+}
+
+.content {
+  flex: 1;
+  background: #f8f8f8;
+  padding: 24px;
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+}
+
+.footer-btn {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.footer-btn.ig {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
+}
+
+.footer-btn.line {
+  background-color: #06c755;
+}
+
+.footer-btn.fb {
+  background-color: #1877f3;
+}
+
+.popup-mask {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-box {
+  background: #fff8fc;
+  padding: 32px;
+  border-radius: 16px;
+  border: 3px solid #e6d9c4;
+  text-align: center;
+}
