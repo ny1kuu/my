@@ -1,17 +1,16 @@
 /* ─── Morandi Light‑Blue Palette ─── */
-:root{
-  --m-blue-1:#ffffff;   /* 最淡：頁面背景 */
-  --m-blue-2:#f1f2f6;   /* 視窗底 */
-  --m-blue-3:#B9C5D1;   /* 視窗邊框 */
-  --m-blue-4:#6b91c0;   /* 標題列 / 主要按鈕 */
-  --m-blue-5:#7D8996;   /* 陰影 / hover */
-
+:root {
+  --m-blue-1:#ffffff;
+  --m-blue-2:#f1f2f6;
+  --m-blue-3:#B9C5D1;
+  --m-blue-4:#6b91c0;
+  --m-blue-5:#7D8996;
   --text-dark:#222;
   --text-light:#fff;
 }
 
 /* 基本字體 & 背景 */
-*{box-sizing:border-box;font-family:"Courier New",monospace;margin:0;padding:0}
+* { box-sizing: border-box; font-family: "Courier New", monospace; margin: 0; padding: 0; }
 body {
   background-color: var(--m-blue-1);
   background-image:
@@ -20,184 +19,106 @@ body {
   background-size: 25px 25px;
   background-position: 0 0, 0 0;
   color: var(--text-dark);
-  padding-bottom: 60px; /* 新增這行 */
+  overflow-x: hidden;
 }
+
+/* Desktop外殼自動縮放（NEW） */
+.desktop-scaler {
+  width: 100vw;
+  height: calc(100vw * (480 / 576));
+  overflow: hidden;
+  position: relative;
+}
+
+/* 桌面內容 */
+.desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 576px;
+  height: 480px;
+  background: var(--m-blue-1);
+  border: 1px solid var(--m-blue-4);
+  box-shadow: 4px 4px 0 var(--m-blue-5), 0 12px 32px 0 rgba(125,137,150,0.18);
+  transform: scale(calc(100vw / 576));
+  transform-origin: top left;
+  overflow: hidden;
+}
+
 .wrapper {
   width: 100%;
   overflow: visible;
 }
 
-/* 固定桌面區域 */
-.desktop{
-  position:relative;
-  width:576px;
-  height:480px;
-  margin:200px auto 0 auto;
-  background:var(--m-blue-1);
-  border:1px solid var(--m-blue-4);
-  overflow:hidden;
-  box-shadow:
-    4px 4px 0 var(--m-blue-5),           /* 原本的實心陰影 */
-    0 12px 32px 0 rgba(125,137,150,0.18); /* 柔和下方陰影 */
-}
-
 /* OS 選單列 */
-.menubar{
-  position:absolute;top:0;left:0;width:100%;height:24px;
-  background:var(--m-blue-4);
-  border-bottom:2px solid var(--text-dark);
+.menubar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 24px;
+  background: var(--m-blue-4);
+  border-bottom: 2px solid var(--text-dark);
 }
 
 /* 共用視窗樣式 */
-.window{
-  position:absolute;
-  background:var(--m-blue-2);
-  border:2px solid var(--m-blue-3);
-  box-shadow:4px 4px 0 var(--m-blue-5);
-  display:flex;flex-direction:column;
+.window {
+  position: absolute;
+  background: var(--m-blue-2);
+  border: 2px solid var(--m-blue-3);
+  box-shadow: 4px 4px 0 var(--m-blue-5);
+  display: flex; flex-direction: column;
 }
-.window .title{
-  background:var(--m-blue-4);
-  color:var(--text-light);
-  padding:3px 6px;
-  border-bottom:2px solid var(--text-dark);
-  font-size:13px;font-weight:bold;
-}
-.window img{max-width:100%;display:block}
-.window p{padding:8px;font-size:14px;line-height:1.3}
-button{cursor:pointer}
-
-/* 主要按鈕 */
-.buy,
-.btn-row button{
-  border:none;
-  font-weight:bold;
-  color:var(--text-light);
-  background:var(--m-blue-4);
-}
-.buy{
-  margin:8px;padding:6px 0;
-  border: none;
-  font-weight: bold;
+.window .title {
   background: var(--m-blue-4);
   color: var(--text-light);
-  padding: 6px 18px;
+  padding: 3px 6px;
+  border-bottom: 2px solid var(--text-dark);
+  font-size: 13px; font-weight: bold;
+}
+.window img { max-width: 100%; display: block; }
+.window p { padding: 8px; font-size: 14px; line-height: 1.3; }
+button { cursor: pointer; }
+
+/* 主要按鈕 */
+.buy, .btn-row button {
+  border: none;
+  font-weight: bold;
+  color: var(--text-light);
+  background: var(--m-blue-4);
+}
+.buy {
+  margin: 8px; padding: 6px 18px;
   border-radius: 8px;
   box-shadow: 2px 2px 0 var(--m-blue-5);
   cursor: pointer;
   transition: background 0.2s;
 }
-.buy:hover,
-.btn-row button:hover{
-  background:var(--m-blue-5);
+.buy:hover, .btn-row button:hover {
+  background: var(--m-blue-5);
   color: var(--m-blue-1);
 }
 
 /* 播放器按鈕區 */
-.btn-row{display:flex;gap:4px;padding:8px}
-.btn-row button{flex:1;height:22px;border:1px solid var(--text-dark)}
+.btn-row { display: flex; gap: 4px; padding: 8px; }
+.btn-row button {
+  flex: 1; height: 22px;
+  border: 1px solid var(--text-dark);
+}
 
 /* 聊天區 */
-.chatbox{padding:8px;font-size:13px;overflow:auto}
-
-/* 原本的視窗座標 (未變動) */
-.window--photo { top:35px;  left:14px;  width:185px; height:170px; }
-.window--config{ top:222px; left:24px;  width:133px; height:118px; }
-.window--product{ top:35px;  left:220px; width:150px; height:205px; }
-.window--chat  { top:80px;  left:380px; width:180px; height:230px; }
-.window--note  { top:270px; left:240px; width:165px; height: 110px;}
-
-/* 桌面捷徑 */
-.dock{
-  position:absolute;left:20px;bottom:20px;
-  display:flex;gap:24px;justify-content:center;align-items:flex-end;margin:24px 0 0 0;padding:0;list-style:none;
-}
-.dock li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.dock img{
-  width:48px;
-  height:48px;
-  display:block;
-}
-.dock-label {
-  font-size:0.95rem;
-  color:#444;
-  margin-top:4px;
-  font-family:'Kosugi Maru','Press Start 2P',sans-serif;
-  letter-spacing:1px;
-}
-
-/* 手機縮放 */
-@media (max-width:1000px){
-  .wrapper{
-    width:100vw;
-    height:100vh;
-    overflow:hidden;
-  }
-  .desktop{
-    transform:scale(calc(100vw / 1000));
-    transform-origin:top left;
-    margin:0;
-    position:absolute;
-    top:0;
-    left:0;
-  }
-  body{overflow-x:hidden;}
-}
-
-
-
-/* Firefox */
-.progress input::-moz-range-track{
-  height:4px;background:var(--m-blue-4);border-radius:2px;
-}
-.progress input::-moz-range-thumb{
-  width:12px;height:12px;background:var(--m-blue-5);border:none;border-radius:50%;
-}
-.sticker-cross-config {
-  position: absolute;
-  width: 140px;           /* 放大貼圖，可依需求調整 */
-  right: -40px;    /* 讓貼圖超出右邊 */
-  bottom: -40px;   /* 讓貼圖超出下方 */
-  z-index: 20;
-  pointer-events: none;
-}
-.sticker-cat-product {
-  position: absolute;
-  width: 140px;
-  left: 180px;
-  bottom: 200px;    /* 往上移動，數值越大越上面 */
-  z-index: 30;
-  pointer-events: none;
-}
-.window--config {
-  position: absolute;
-  top: 300px;
-  left: 14px;   /* 這裡改小，越小越靠左 */
-  width: 230px;
-  height: 160px;
-  z-index: 2;
-  overflow: visible;
-}
-.wrapper, .desktop {
-  position: relative;
-}
-.window--note p {
-overflow-y: auto;
-  overflow-x: hidden;
-}
-.window--product {
-  position: relative;  /* 確保有這行 */
+.chatbox {
+  padding: 8px;
+  font-size: 13px;
   overflow-y: auto;
-  overflow-x: hidden; 
+  max-height: 160px;
 }
+
+/* 各視窗位置 */
+.window--photo   { top: 35px;  left: 14px;  width: 185px; height: 170px; }
+.window--config  { top: 300px; left: 14px;  width: 230px; height: 160px; overflow: visible; z-index: 2; }
+.window--product { top: 35px;  left: 220px; width: 150px; height: 205px; position: relative; overflow-y: auto; }
+.window--chat    { top: 80px;  left: 380px; width: 180px; height: 230px; }
+.window--note    { top: 270px; left: 240px; width: 165px; height: 110px; }
+
 .window--product .title {
-  position: sticky;
-  top: 0;
-  left: 0;
+  position: sticky; top: 0; left: 0;
   z-index: 2;
   background: var(--m-blue-4);
   color: var(--text-light);
@@ -206,10 +127,30 @@ overflow-y: auto;
   font-size: 13px;
   font-weight: bold;
 }
+
+/* 圖片樣式 */
 .window--photo img {
   width: 140px;
   height: 140px;
-  object-fit: cover; /* 保持正方形且填滿，不變形 */
+  object-fit: cover;
   display: block;
   margin: auto;
+}
+
+/* 貼圖裝飾 */
+.sticker-cross-config {
+  position: absolute;
+  width: 140px;
+  right: -40px;
+  bottom: -40px;
+  z-index: 20;
+  pointer-events: none;
+}
+.sticker-cat-product {
+  position: absolute;
+  width: 140px;
+  left: 180px;
+  bottom: 200px;
+  z-index: 30;
+  pointer-events: none;
 }
