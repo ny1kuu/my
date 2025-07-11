@@ -231,14 +231,18 @@ button {
 
   .wrapper {
     width: 100vw;
-    height: auto;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
   }
 
   .desktop {
-    transform: scale(calc(100vw / 576)); /* 根據螢幕寬度自動縮放 */
-    transform-origin: top left;
     width: 576px;
     height: auto;
-    margin: 0;
+    transform: scale(calc(100vw / 576));
+    transform-origin: top left;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
