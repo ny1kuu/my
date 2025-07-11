@@ -132,6 +132,11 @@ button{cursor:pointer}
 
 /* 手機縮放 */
 @media (max-width:1000px){
+  .wrapper{
+    width:100vw;
+    height:100vw;
+    overflow:hidden;
+  }
   .desktop{
     transform:scale(calc(100vw / 1000));
     transform-origin:top left;
@@ -140,24 +145,7 @@ button{cursor:pointer}
   body{overflow-x:hidden;}
 }
 
-@media (max-width: 430px) {
-  html, body {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-  }
-  .wrapper {
-    width: 222vw;
-    min-width: unset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .desktop {
-    transform: scale(0.32); /* 這裡調整縮小比例，與 .wrapper 一致或更小 */
-    transform-origin: top left;
-  }
-}
+
 
 /* Firefox */
 .progress input::-moz-range-track{
