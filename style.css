@@ -221,12 +221,16 @@ button {
 }
 
 /* ─── 響應式：手機版縮放處理 ─── */
+/* 原本 CSS ...（不變） */
+/* 最底部新增並修正的 media query */
+
 @media (max-width: 1000px) {
   html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    width: 100%;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
   }
 
   .wrapper {
@@ -238,11 +242,11 @@ button {
 
   .desktop {
     width: 576px;
-    height: auto;
+    height: 480px;
     transform: scale(calc(100vw / 576));
     transform-origin: top left;
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
   }
 }
