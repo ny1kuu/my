@@ -1,98 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>使用手冊</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrapper">
-    <div class="desktop">
-      <!-- OS 頂端選單列 -->
-      <div class="menubar"></div>
+    <div class="desktop-scaler">
+      <div class="desktop">
+        <div class="menubar"></div>
 
-      <!-- 左上：預覽影片/圖片視窗 -->
-      <div class="window window--photo">
-        <div class="title">写真</div>
-        <img src="鬆餅.jpg" alt="">
-      </div>
-
-      <!-- 情報欄 -->
-      <div class="window window--config">
-        <div class="title">情報欄</div>
-        <p>
-          喜歡銀時<br>
-          林優紀也是我<br>
-          姓什麼都無所謂，偶爾變成坂田優紀或張優紀。
-        </p>
-        <!-- ▶ / ⏸ 按鈕 + 其它裝飾 -->
-        <div class="btn-row">
-          <button>◄</button>
-          <button id="play-btn" class="player-btn">▶</button>
-          <button>►</button>
+        <div class="window window--photo">
+          <div class="title">写真</div>
+          <img src="鬆餅.jpg" alt="">
         </div>
-        <img src="希貓.png" alt="希貓" class="sticker-cross-config">
-      </div> <!-- 結束 .window--config -->
 
-      <!-- 商品頁 -->
-      <div class="window window--product">
-        <div class="title">ご注意ください‼︎</div>
-        <p>單機夢女，不混夢圈<br>
-          交好相澤消太夢女<br>
-          拒同嫁過多專屬發言、明顯低齡<br>
-          <strong>‼︎雷銀右、銀神‼︎<br></strong>
-          ...<br>
-          交友請觀看以下自介ㅠ ‧̫ ㅠ
-        </p>
-        <a href="https://ny1kuu9.carrd.co/" class="buy" target="_blank" rel="noopener">carrd⤵︎</a>
-      </div>
-
-      <!-- 右：聊天室 -->
-      <div class="window window--chat">
-        <div class="title">🧩</div>
-        <div class="chatbox">
-          <p><b>Uki</b> : 你是不是又偷吃我的布丁???</p>
-          <p><b>Gintoki</b> : 沒有吧，好像是他自己走到我嘴裡的</p>
-          <p><b>Uki</b> : 我要報警</p>
-          <img src="布丁.jpg" alt="gu" class="">
+        <div class="window window--config">
+          <div class="title">情報欄</div>
+          <p>
+            喜歡銀時<br>
+            林優紀也是我<br>
+            姓什麼都無所謂，偶爾變成坂田優紀或張優紀。
+          </p>
+          <div class="btn-row">
+            <button>◄</button>
+            <button id="play-btn" class="player-btn">▶</button>
+            <button>►</button>
+          </div>
+          <img src="希貓.png" alt="希貓" class="sticker-cross-config">
         </div>
-      </div>
 
-      <!-- 中下：備忘便條 -->
-      <div class="window window--note">
-        <div class="title">ノート🗒️</div>
-        <p>🔔20:00搶購草莓牛奶(5折)!!!<br>
-          ---------------<br>
-          -酢昆布(最大包的アル)*100<br>
-          -🧻*3<br>
-          -Jump周刊*1<br>
-          -<del>襪子*4</del><br>
-          -<del>酸痛貼布</del> 赤葦買了
-        </p>
-      </div>
+        <div class="window window--product">
+          <div class="title">ご注意ください‼</div>
+          <p>單機夢女，不混夢圈<br>
+            交好相澤消太夢女<br>
+            拒同嫁過多專屬發言、明顯低齡<br>
+            <strong>‼雷銀右、銀神‼<br></strong>
+            ...<br>
+            交友請觀看以下自介ㅠ ‧̫ ㅠ
+          </p>
+          <a href="https://ny1kuu9.carrd.co/" class="buy" target="_blank" rel="noopener">carrd⤵</a>
+        </div>
 
-      <!-- 銀貓貼圖放在所有 window 之後 -->
-      <img src="銀貓.png" alt="銀貓" class="sticker-cat-product">
+        <div class="window window--chat">
+          <div class="title">🧩</div>
+          <div class="chatbox">
+            <p><b>Uki</b> : 你是不是又偷吃我的布丁???</p>
+            <p><b>Gintoki</b> : 沒有吧，好像是他自己走到我嘴裡的</p>
+            <p><b>Uki</b> : 我要報警</p>
+            <img src="布丁.jpg" alt="gu" class="">
+          </div>
+        </div>
+
+        <div class="window window--note">
+          <div class="title">ノート🗒️</div>
+          <p>🔔20:00搶購草莓牛奶(5折)!!!<br>
+            ---------------<br>
+            -酢昆布(最大包的アル)*100<br>
+            -🧻*3<br>
+            -Jump周刊*1<br>
+            -<del>襪子*4</del><br>
+            -<del>酸痛貼布</del> 赤葦買了
+          </p>
+        </div>
+
+        <img src="銀貓.png" alt="銀貓" class="sticker-cat-product">
+      </div>
     </div>
   </div>
   <audio id="desk-music" src="music.mp3" preload="auto"></audio>
   <script>
-const playBtn  = document.getElementById('play-btn');
-const player   = document.getElementById('desk-music');
-const progress = document.getElementById('progress');
+    const playBtn = document.getElementById('play-btn');
+    const player = document.getElementById('desk-music');
 
-/* 點按鈕播放 / 暫停 */
-playBtn.addEventListener('click', e => {
-  e.stopPropagation();
-  if (player.paused){
-    player.play();
-    playBtn.textContent = '⏸';
-  }else{
-    player.pause();
-    playBtn.textContent = '▶';
-  }
-});
-</script>
+    playBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      if (player.paused) {
+        player.play();
+        playBtn.textContent = '⏸';
+      } else {
+        player.pause();
+        playBtn.textContent = '▶';
+      }
+    });
+  </script>
 </body>
+</html>
 </html>
