@@ -154,3 +154,19 @@ button { cursor: pointer; }
   z-index: 30;
   pointer-events: none;
 }
+.desktop-scaler {
+  width: 100vw;
+  height: calc(100vw * (480 / 576)); /* 高度自動依照比例縮放 */
+  overflow: hidden;
+  position: relative;
+}
+
+.desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 576px;
+  height: 480px;
+  transform: scale(calc(100vw / 576));
+  transform-origin: top left;
+}
