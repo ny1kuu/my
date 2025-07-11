@@ -141,6 +141,9 @@ button{cursor:pointer}
     transform:scale(calc(100vw / 1000));
     transform-origin:top left;
     margin:0;
+    position:absolute;
+    top:0;
+    left:0;
   }
   body{overflow-x:hidden;}
 }
