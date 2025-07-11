@@ -228,9 +228,10 @@ button {
   html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    touch-action: none;
   }
 
   .wrapper {
@@ -243,10 +244,11 @@ button {
   .desktop {
     width: 576px;
     height: 480px;
-    transform: scale(calc(100vw / 576));
-    transform-origin: top left;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 水平與垂直居中 */
+    zoom: calc(100vw / 576);          /* 根據螢幕寬度縮小 */
+    transform-origin: top left;       /* optional，防止 iOS 抖動 */
   }
 }
